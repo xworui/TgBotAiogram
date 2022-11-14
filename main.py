@@ -7,8 +7,7 @@ dp = Dispatcher(bot) #диспетчер, анализирует все вход
 
 @dp.message_handler()                             # отвечает на все сообщения
 async def echo(message: types.Message):
-    await message.answer(text=message.text)
-
+    await message.answer(text=message.text.upper)
 
 if __name__ == '__main__':
     executor.start_polling(dp)
